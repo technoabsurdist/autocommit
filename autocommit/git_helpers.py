@@ -42,7 +42,7 @@ def generate_commit_message():
         print("No changes detected or unable to get git diff.")
         return None
 
-    response = ollama.chat(model="llama3", messages=[
+    response = ollama.chat(model="llama3.1", messages=[
         {
             'role': 'user',
             'content': SYS_PROMPT 
