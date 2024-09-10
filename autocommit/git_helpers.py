@@ -2,7 +2,11 @@ import ollama
 import subprocess
 
 SYS_PROMPT = """
-Below is a git diff. Please analyze the changes and generate a concise, clear, and meaningful git commit message. Ensure the message explains what was done and why, focusing on actions like 'fix', 'add', 'update', or 'refactor'. If relevant, mention performance improvements, bug fixes, or dependency updates. Keep the message to one or two lines and use active language. Only return the commit message, always in lowercase.
+Below is a git diff. Please analyze the changes and generate a concise, clear, and meaningful git commit message. Ensure the message explains what was done and why, focusing on actions like 'fix', 'add', 'update', or 'refactor'. If relevant, mention performance improvements, bug fixes, or dependency updates. Keep the message to one or two lines and use active language. 
+
+Always return the commit message in lowercase. 
+
+You should only return the commit message, and nothing else.
 """
 
 def get_git_diff() -> str | None:
