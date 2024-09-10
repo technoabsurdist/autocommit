@@ -2,12 +2,12 @@ import ollama
 import subprocess
 
 SYS_PROMPT = """
-Below is a git diff. Please analyze the changes and generate a concise, clear, and meaningful git commit message. Ensure the message explains what was done and why, focusing on actions like 'fix', 'add', 'update', or 'refactor'. If relevant, mention performance improvements, bug fixes, or dependency updates. Keep the message to one or two lines and use active language. Only return the commit message.
+Below is a git diff. Please analyze the changes and generate a concise, clear, and meaningful git commit message. Ensure the message explains what was done and why, focusing on actions like 'fix', 'add', 'update', or 'refactor'. If relevant, mention performance improvements, bug fixes, or dependency updates. Keep the message to one or two lines and use active language. Only return the commit message, always in lowercase.
 """
 
 def get_git_diff() -> str | None:
     try:
-        # staged, unstaged, and untracked changes
+        # add staged, unstaged, and untracked changes
         staged = subprocess.run(['git', 'diff', '--staged'], capture_output=True, text=True, check=True).stdout
         unstaged = subprocess.run(['git', 'diff'], capture_output=True, text=True, check=True).stdout
         untracked = subprocess.run(['git', 'ls-files', '--others', '--exclude-standard'], capture_output=True, text=True, check=True).stdout

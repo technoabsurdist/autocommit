@@ -1,3 +1,4 @@
+import sys
 from git_helpers import commit_changes
 
 def main():
@@ -7,4 +8,4 @@ def main():
         print("Commit process failed.")
 
 if __name__ == "__main__":
-    main()
+    sys.exit(main())
