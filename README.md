@@ -1,3 +1,5 @@
+download: [git-autocommit (pypi)](https://pypi.org/project/git-autocommit/0.1.0/)
+
 while working my last job i often had trouble making good commit
 messages.
 
