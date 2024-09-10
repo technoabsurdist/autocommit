@@ -1,5 +1,5 @@
 import sys
-from git_helpers import commit_changes
+from autocommit.git_helpers import commit_changes
 
 def main():
     if commit_changes():

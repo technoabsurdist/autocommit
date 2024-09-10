@@ -9,7 +9,7 @@ setup(
     ],
     entry_points={
         "console_scripts": [
-            "autocommit=main:main",
+            "autocommit=autocommit.main:main",
         ],
     },
 )
