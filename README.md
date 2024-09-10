@@ -1,3 +1,10 @@
+
+<div align="center">
+  <img src="https://github.com/user-attachments/assets/400a7e7e-443b-4525-a617-071d895df704" alt="Image description" />
+</div>
+
+-------------
+
 while working my last job i often had trouble making good commit
 messages.
 
